@@ -21,7 +21,7 @@ public class SeleniumTestCase {
 
     private static final int TEMPO_MAXIMO_ESPERA = 10;
 
-    protected static WebDriver driver;
+    protected static FirefoxDriver driver;
 
     /**
      * Realiza uma unica instancia do driver, para ser reutilizado em todos os
@@ -41,6 +41,7 @@ public class SeleniumTestCase {
         //driver.close();
         driver.quit();
     }
+    
 
     protected void esperarPor(String elementoDeId) throws InterruptedException {
         //Thread.sleep(2000); //apenas para podermos visualizar a tela antes da verificacao

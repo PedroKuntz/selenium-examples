@@ -5,6 +5,7 @@
  */
 package br.com.dextraining;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,6 +26,7 @@ public class E02ExemploLoginComDiferentesBy {
         driver.get("http://localhost:4567/login.html");
         driver.findElement(By.id("inputEmail")).sendKeys("usuario@dominio.com");
         driver.findElement(By.id("inputPassword")).sendKeys("senha");
+//        Thread.sleep(1000);
         driver.findElement(By.id("btnLogin")).click();
 
         esperarPor(driver, "lnkPaginaInicial");
@@ -74,12 +76,34 @@ public class E02ExemploLoginComDiferentesBy {
         driver.findElement(By.name("inputEmail")).sendKeys("usuario@dominio.com");
         driver.findElement(By.name("inputPassword")).sendKeys("senha");
         
-        driver.findElement(By.linkText("Perdi minha senha")).click();
+        driver.findElement(By.linkText("Perdi minha")).click();
         driver.findElement(By.partialLinkText("Perdi")).click();
         
         driver.findElement(By.name("btnLogin")).click();
 
         esperarPor(driver, "lnkPaginaInicial");
+    }
+    
+    @Test
+    public void exemploDeLink() {
+    	WebDriver driver = new FirefoxDriver();
+    	driver.get("http://www.google.com");
+    	Assert.assertTrue(driver.findElement(
+    			By.linkText("Gmail")).isDisplayed());
+    	
+    	Assert.assertTrue(driver.findElement(
+    			By.partialLinkText("Imag")).isDisplayed());
+    	
+    	String link1Text = driver.findElement(
+    			By.linkText("Gmail")).getText();
+    	
+    	String link2Text = driver.findElement(
+    			By.partialLinkText("Imag")).getText();
+    	
+    	System.out.println(link1Text);
+    	System.out.println(link2Text);
+    	Assert.assertNotEquals(link1Text, link2Text);
+    	driver.close();
     }
 
     /**

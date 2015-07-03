@@ -24,7 +24,8 @@ public class E50PageObject extends SeleniumTestCase {
         driver.get("http://localhost:4567/login.html");
         LoginPage loginPage = new LoginPage(driver);
 
-        loginPage.digitarEmail("usuario@dominio.com").digitarSenha("senha");
+        loginPage.digitarEmail("usuario@dominio.com")
+        	.digitarSenha("senha");
         PaginainicialPage paginaInicialPage = loginPage.fazerLogin();
 
         Assert.assertTrue("Nao foi encontrado o titulo na pagina inicial", paginaInicialPage.temTituloNaPaginaInicial());
