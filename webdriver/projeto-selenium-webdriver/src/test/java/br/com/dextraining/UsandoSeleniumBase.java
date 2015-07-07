@@ -1,6 +1,5 @@
 package br.com.dextraining;
 
-import org.junit.AfterClass;
 import org.junit.Test;
 
 import br.com.dextraining.selenium.SeleniumTestCase;

@@ -1,6 +1,7 @@
 package br.com.dextraining.mercadoLivre;
 
 import org.junit.AfterClass;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -13,8 +14,12 @@ public class MercadoLivreBase {
 	protected static FirefoxDriver driver;
 
 	@BeforeClass
-	public static void setup() {
+	public static void antesDaClasseDeTeste() {
 		driver = new FirefoxDriver();
+	}
+	
+	@Before
+	public void antesDeCadaTeste() {
 		driver.get("http://www.mercadolivre.com.br/");
 	}
 

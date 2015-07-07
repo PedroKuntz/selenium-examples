@@ -5,7 +5,9 @@
  */
 package br.com.dextraining;
 
+import org.junit.AfterClass;
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +17,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class E02ExemploLoginComDiferentesBy {
 
+	@BeforeClass
+	public static void setup() {
+		IniciarSistema.start();
+	}
+	
+	@AfterClass
+	public static void stop() {
+		IniciarSistema.stop();
+	}
     /**
      * Exemplo usando o atributo id do input
      *
@@ -76,8 +87,8 @@ public class E02ExemploLoginComDiferentesBy {
         driver.findElement(By.name("inputEmail")).sendKeys("usuario@dominio.com");
         driver.findElement(By.name("inputPassword")).sendKeys("senha");
         
-        driver.findElement(By.linkText("Perdi minha")).click();
-        driver.findElement(By.partialLinkText("Perdi")).click();
+        driver.findElement(By.linkText("Perdi minha senha")).click();
+//        driver.findElement(By.partialLinkText("Perdi")).click();
         
         driver.findElement(By.name("btnLogin")).click();
 

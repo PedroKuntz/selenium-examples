@@ -2,9 +2,10 @@ package br.com.dextraining.mercadoLivre;
 
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
-public class MercadoLivreTest extends MercadoLivreBase {
+public class MercadoLivreBuscaGlobal extends MercadoLivreBase {
 	
 	@Test
 	public void testeEntrarNaPaginaDoMercadoLivre() {
@@ -31,6 +32,7 @@ public class MercadoLivreTest extends MercadoLivreBase {
 	public void testeCadastrarSemPAgeObject() throws InterruptedException {
 		String cssLinkCadastrar = "a[data-tracking='HEADER-REGISTRATE']";
 		driver.findElementByCssSelector(cssLinkCadastrar).click();
+		esperarPor("signupFirstName");
 		driver.findElementById("signupFirstName").sendKeys("Leonardo");
 	}
 	

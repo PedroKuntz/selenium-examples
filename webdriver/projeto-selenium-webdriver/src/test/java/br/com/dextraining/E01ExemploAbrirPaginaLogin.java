@@ -20,8 +20,10 @@ public class E01ExemploAbrirPaginaLogin {
 
 	@Test
 	public void login() {
+		IniciarSistema.start();
 		WebDriver driver = new FirefoxDriver();
 		driver.get("http://localhost:4567/login.html");
+		IniciarSistema.stop();
 	}
 
 	@Test

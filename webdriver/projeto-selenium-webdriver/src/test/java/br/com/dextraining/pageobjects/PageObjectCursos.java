@@ -20,6 +20,6 @@ public class PageObjectCursos {
 	}
 
 	public void entrarEm(String linkTextDoCurso) {
-		driver.findElementByLinkText(linkTextDoCurso);
+		driver.findElementByLinkText(linkTextDoCurso).click();
 	}
 }

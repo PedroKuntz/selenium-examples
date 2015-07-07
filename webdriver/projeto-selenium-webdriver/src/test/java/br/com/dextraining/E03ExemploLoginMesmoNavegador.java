@@ -5,9 +5,7 @@
  */
 package br.com.dextraining;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -28,6 +26,7 @@ public class E03ExemploLoginMesmoNavegador {
      */
     @BeforeClass
     public static void prepararTeste() {
+    	IniciarSistema.start();
         driver = new FirefoxDriver();
         driver.get("http://localhost:4567/login.html");
     }
@@ -39,11 +38,13 @@ public class E03ExemploLoginMesmoNavegador {
     @AfterClass
     public static void finalizarTestes() {
         driver.close();
+        IniciarSistema.stop();
     }
     
 
     @Test
     public void loginComSucessoUsandoId() throws InterruptedException {
+    	driver.get("http://localhost:4567/login.html");
         driver.findElement(By.id("inputEmail")).sendKeys("usuario@dominio.com");
         driver.findElement(By.id("inputPassword")).sendKeys("senha");
         driver.findElement(By.id("btnLogin")).click();
@@ -53,6 +54,7 @@ public class E03ExemploLoginMesmoNavegador {
 
     @Test
     public void loginComSucessoUsandoClassName() throws InterruptedException {
+    	driver.get("http://localhost:4567/login.html");
         driver.findElement(By.className("inputEmail")).sendKeys("usuario@dominio.com");
         driver.findElement(By.className("inputPassword")).sendKeys("senha");
         driver.findElement(By.className("btnLogin")).click();
@@ -77,6 +79,7 @@ public class E03ExemploLoginMesmoNavegador {
      */
     @Test
     public void loginComSucessoDemonstrandoLink() throws InterruptedException {
+    	driver.get("http://localhost:4567/login.html");
         driver.findElement(By.name("inputEmail")).sendKeys("usuario@dominio.com");
         driver.findElement(By.name("inputPassword")).sendKeys("senha");
         

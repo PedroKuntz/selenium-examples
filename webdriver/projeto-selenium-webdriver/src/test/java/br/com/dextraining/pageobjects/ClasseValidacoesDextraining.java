@@ -25,6 +25,7 @@ public class ClasseValidacoesDextraining extends PageObjectsSeleniumBase{
 		
 		//validar que existem 10 subcursos de JAVA
 		PageObjectCursoSelecionado curso = new PageObjectCursoSelecionado(driver);
+		
 		curso.verificarQueExistemXSubCursos(10);
 		
 		//entrar na tela de instrutores 

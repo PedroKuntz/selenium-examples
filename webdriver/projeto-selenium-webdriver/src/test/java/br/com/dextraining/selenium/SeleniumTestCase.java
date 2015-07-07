@@ -13,6 +13,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import br.com.dextraining.IniciarSistema;
+
 /**
  *
  * @author dherik
@@ -29,6 +31,7 @@ public class SeleniumTestCase {
      */
     @BeforeClass
     public static void prepararTeste() {
+    	IniciarSistema.start();
         driver = new FirefoxDriver();
     }
 
@@ -40,6 +43,7 @@ public class SeleniumTestCase {
     public static void finalizarTestes() {
         //driver.close();
         driver.quit();
+        IniciarSistema.stop();
     }
     
 
