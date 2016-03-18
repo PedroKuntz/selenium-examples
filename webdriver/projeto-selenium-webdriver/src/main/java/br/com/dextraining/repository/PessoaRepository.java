@@ -7,10 +7,6 @@ package br.com.dextraining.repository;
 
 import br.com.dextraining.dto.PessoaDto;
 import br.com.dextraining.entidade.PessoaDb;
-import br.com.dextraining.entidade.Profissao;
-import br.com.dextraining.entidade.Sexo;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
