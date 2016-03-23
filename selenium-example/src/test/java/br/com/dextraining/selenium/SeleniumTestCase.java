@@ -42,7 +42,7 @@ public class SeleniumTestCase {
 		driver.quit();
 	}
 
-	protected void esperarPor(String elementoDeId) throws InterruptedException {
+	protected void esperarPor(final String elementoDeId) throws InterruptedException {
 		// Thread.sleep(2000); //apenas para podermos visualizar a tela antes da
 		// verificacao
 		(new WebDriverWait(driver, TEMPO_MAXIMO_ESPERA))

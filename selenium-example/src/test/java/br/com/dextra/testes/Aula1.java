@@ -89,8 +89,25 @@ public class Aula1 {
 		select.selectByValue("Webmail");
 		Thread.sleep(6000);
 
+
+
 		select.selectByVisibleText("Registrar");
 		Thread.sleep(6000);
+
+	}
+
+	@Test
+	public void testeRadioButtonCheckBoxSelectDeselect() throws InterruptedException {
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.google.com.br/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&ved=0ahUKEwiT_9DOicnLAhWDjpAKHYu-CH8QFgg6MAM&url=https%3A%2F%2Fwww.utexas.edu%2Flearn%2Fforms%2Fradio.html&usg=AFQjCNFomnF3u-T-00xq-5XYReh4GGeIRw&cad=rja");
+
+		Select select = new Select(driver.findElement(By.id("quicklinks")));
+		select.selectByIndex(4);
+		Thread.sleep(6000);
+
+		select.deselectByIndex(4);
+		Thread.sleep(6000);
+
 
 	}
 

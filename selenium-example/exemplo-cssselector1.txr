@@ -1,0 +1,105 @@
+
+
+<div>
+	<ul>
+		<li class="fonte-escura">
+			<label>Nome</label>
+			<input name="nomeCompletoDoUsuario"></input>
+		</li>
+		<li>
+			<label>Email</label>
+			<input name="nome"></input>
+			<input class="dados"></input>
+		</li>
+		<li>
+			<label>Telefone</label>
+			<input class="dados"></input>
+		</li>
+	</ul>
+
+	<button></button
+</div>
+
+
+
+
+
+
+
+<div class="dados">
+	<input name="nome" ></input>  
+		--> div.dados input[name=nome]
+		--> div.dados input
+</div>
+
+
+<div class="infos">
+	<input name="nome" ></input>
+		--> div.infos input[name=nome]
+		--> div.infos input
+</div>
+
+
+
+
+
+<div id="usuario">
+	<div class="dados">
+		<input name="nome" ></input> 
+		-> div#usuarios .dados [name=nome] 
+	</div>
+</div>
+
+
+<div id="curso">
+	<div class="dados">
+		<input name="nome" ></input>
+		-> div#curso .dados [name=nome] 
+	</div>
+</div>
+
+
+
+
+
+
+<input class="dados nome" ></input> -> input.dados.nome
+<input class="dados email" ></input>
+
+
+
+
+
+
+
+
+
+
+
+
+<input data-bla="nome"></input>
+
+-> input[data-bla=nome]
+
+<a data-tracking="CATEGNEWBIE-1743"  href="/bla">
+
+-> a[data-tracking=CATEGNEWBIE-1743]
+
+By.cssSelector("a[data-tracking=CATEGNEWBIE-1743]")
+By.linkText("Carros, Motos e Outros");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
